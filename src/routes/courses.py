@@ -6,7 +6,7 @@ courses_router = Blueprint('courses_router', __name__)
 
 @courses_router.route('/courses', methods=['POST'])
 def createCourse():
-  image = request.files['image']
+  image = request.json['image']
   
   url = upload_images.upload(image)
 
