@@ -6,12 +6,12 @@ projects_router = Blueprint('projects_router', __name__)
 
 @projects_router.route('/projects', methods=['POST'])
 def createProject():
-  image = request.json['image']
+  #image = request.json['image']
   
-  url = upload_images.upload(image)
+  #url = upload_images.upload(image)
 
   new_project = request.get_json()
-  new_project['image'] = url
+  #new_project['image'] = url
   
   result = Project(**new_project).save()
   id = result.id

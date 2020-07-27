@@ -12,7 +12,8 @@ class Project(db.Document):
   title = db.StringField(required=True)
   description = db.StringField(required=True)
   image = db.StringField(required=True)
-  adicionalInfo = db.StringField(required=True)
+  url = db.StringField(required=True)
+  tec = db.StringField(required=True)
 
 class Course(db.Document):
   title = db.StringField(required=True)
